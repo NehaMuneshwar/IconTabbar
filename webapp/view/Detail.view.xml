@@ -1,0 +1,72 @@
+<mvc:View controllerName="com.ibs.dynamicform.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:sf="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform">
+    <Page id="detailpage" title=''>
+   <content>
+     <IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info" iconColor="Positive">
+				<content>
+                	<form:SmartForm id="SF1" class="editableForm" editTogglable="true" editable="true" title="Product Details">
+			<form:Group id="G1" label="Product">
+            <form:GroupElement >
+            <sf:SmartField textLabel="ProductName" value="{ProductName}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="SupplierID" value="{SupplierID}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="CategoryID" value="{UnitsInStock}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="QuantityPerUnit" value="{QuantityPerUnit}"/>
+            </form:GroupElement>
+
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="UnitPrice" value="{UnitPrice}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="UnitsInStock" value="{UnitsInStock}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="UnitsOnOrder" value="{UnitsInStock}"/>
+            </form:GroupElement>
+
+             </form:Group>
+		</form:SmartForm>
+                </content>
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://attachment"
+				key="attachments"
+				count="3"
+                iconColor="Negative">
+					<List
+		headerText="Supplier Detail"
+		headerLevel="H2" mode="SingleSelectMaster" selectionChange="listChange">
+		<StandardListItem
+			title="Category"
+			/>
+	</List>
+				</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://notes"
+				key="notes"
+				count="12"
+                iconColor="Critical">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+			</items>
+	</IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

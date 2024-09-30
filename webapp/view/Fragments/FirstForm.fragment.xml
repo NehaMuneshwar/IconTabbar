@@ -1,0 +1,26 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+		xmlns:l="sap.ui.layout">
+	
+	<Dialog icon="sap-icon://message-success"
+ title="Approve"  type="Standard" titleAlignment="Center" state="Success">
+ 
+	<l:VerticalLayout  class="sapUiContentPadding">
+	<Label text="CREATED BY"></Label>
+	<Input value="{}" width="100px" id="createdid"></Input>
+ <Label text="Do You Want to Aapprove?" textAlign="Center" class="align" labelFor="Center"></Label>
+<Label text="Comment:"></Label>
+<TextArea rows="5" cols="70" maxLength="1000" showExceededText="true" id="comment"></TextArea>
+	</l:VerticalLayout>
+
+
+<Toolbar>
+<ToolbarSpacer/>
+<Button icon="sap-icon://accept" text="Submit" press="OnApprove" type="Emphasized"></Button>
+<Button icon="sap-icon://decline" text="Cancel" press="close" type="Reject"></Button>
+</Toolbar>
+
+ </Dialog>
+</core:FragmentDefinition>

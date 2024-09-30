@@ -1,0 +1,42 @@
+<mvc:View controllerName="com.ibs.dynamicform.controller.Detaildetail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:sf="sap.ui.comp.smartfield" xmlns:form="sap.ui.comp.smartform">
+    <Page id="detaildetailpage" title='' showNavButton="true" navButtonPress="navBack">
+   <content>
+     <IconTabBar
+		id="idIconTabBarMulti1"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info" iconColor="Positive">
+				<content>
+                	<form:SmartForm id="SF17" class="editableForm" editTogglable="true" editable="true" title="Product Details">
+			<form:Group id="G13" label="Supplier">
+            <form:GroupElement >
+            <sf:SmartField textLabel="CategoryID" value="{CategoryID}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="CategoryName" value="{CategoryName}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="CategoryID" value="{UnitsInStock}"/>
+            </form:GroupElement>
+
+			<form:GroupElement >
+            <sf:SmartField textLabel="Description" value="{Description}"/>
+            </form:GroupElement>
+
+
+
+             </form:Group>
+		</form:SmartForm>
+                </content>
+			</IconTabFilter>
+			
+			</items>
+	</IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

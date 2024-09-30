@@ -1,0 +1,19 @@
+<mvc:View controllerName="com.ibs.dynamicform.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:sf="sap.ui.comp.smartfield"
+    xmlns="sap.m">
+    <Page id="masterpage" title="Products">
+    	<content>
+        <SearchField liveChange="onsearch"></SearchField>
+       <List
+        growingScrollToLoad="true"
+		items="{
+			path: '/Products',
+            sorter:{path:'CategoryID' , group:true}
+		}" mode="SingleSelectMaster" selectionChange="selectList" id="idMasterList" updateFinished="intupd">
+		<StandardListItem
+			title="{ProductName}"
+			counter="{UnitsInStock}"/>
+	</List>
+        </content>
+    </Page>
+</mvc:View>
